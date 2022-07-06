@@ -1,0 +1,3 @@
+﻿  Months.cpp
+C:\Users\ekovm\source\repos\Months\Months.cpp(54,36): warning C4145: ||: использование выражения с оператором отношения в качестве выражения для выбора вариантов; возможное смешение с "|"
+  Months.vcxproj -> C:\Users\ekovm\source\repos\Months\x64\Debug\Months.exe
