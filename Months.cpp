@@ -1,54 +1,54 @@
 ﻿#include <iostream>
 
-enum class months : int {
-    January = 1, February = 2, March = 3, April = 4, May = 5, June = 6,
-    July = 7, August = 8, September = 9, October = 10, November = 11, December = 12
+enum class months {
+    January = 1, February, March, April, May, June,
+    July, August, September, October, November, December
 };
 
 int main(int argc, char** argv)
 {
     setlocale(LC_ALL, "Russian");
     months number = months::January;
-    bool exit = true;
     int fl = static_cast<int>(number);
+    bool exit = true;
     do {
         std::cout << "Введите номер месяца: ";
         std::cin >> fl;
-        switch (fl) {
-        case(1):
+        switch (enum months(fl)) {
+            case months::January:
             std::cout << "Январь" << std::endl;
             break;
-        case(2):
+            case months::February:
             std::cout << "Февраль" << std::endl;
             break;
-        case(3):
+            case months::March:
             std::cout << "Март" << std::endl;
             break;
-        case(4):
+            case months::April:
             std::cout << "Апрель" << std::endl;
             break;
-        case(5):
+            case months::May:
             std::cout << "Май" << std::endl;
             break;
-        case(6):
+            case months::June:
             std::cout << "Июнь" << std::endl;
             break;
-        case(7):
+            case months::July:
             std::cout << "Июль" << std::endl;
             break;
-        case(8):
+            case months::August:
             std::cout << "Август" << std::endl;
             break;
-        case(9):
+            case months::September:
             std::cout << "Сентябрь" << std::endl;
             break;
-        case(10):
+            case months::October:
             std::cout << "Октябрь" << std::endl;
             break;
-        case(11):
+            case months::November:
             std::cout << "Ноябрь" << std::endl;
             break;
-        case(12):
+            case months::December:
             std::cout << "Декабрь" << std::endl;
             break;
         } switch (fl > 12||fl < 0) {
